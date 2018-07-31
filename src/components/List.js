@@ -35,7 +35,7 @@ class List extends Component {
                 <ul>
                     {
                         data.length > 0 && data.map((item, index) =>
-                            (<li key={index}><Photo title={item.title}></Photo></li>)
+                            (<li key={index}><Photo {...item}></Photo></li>)
                         )}
                 </ul>
             </div>
