@@ -2,15 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class Photo extends Component {
-
-    /**
-     * Constructor
-     * @param props
-     */
-  constructor(props) {
-    super(props);
-  }
-
     /**
      * render
      * @returns {*}
@@ -19,10 +10,12 @@ class Photo extends Component {
 
     const title = this.props.title;
     return (
-    <div className="albums">
-      <div className="album">
-          {title}
-      </div>
+     <div className="photo">
+        <a href={url} className="link">
+        <img src={thumbnailUrl} />
+        <br/>
+        {title}
+        </a>
     </div>
     );
   }
