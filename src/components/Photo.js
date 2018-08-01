@@ -22,7 +22,7 @@ class Photo extends Component {
 }
 
 Photo.propTypes = {
-  id: PropTypes.string,
+  id: PropTypes.number,
   title: PropTypes.string,
   url: PropTypes.string,
   thumbnailUrl: PropTypes.string,
