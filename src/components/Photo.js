@@ -8,7 +8,7 @@ class Photo extends Component {
      */
   render() {
 
-    const title = this.props.title;
+    const { title, url, thumbnailUrl }  = this.props;
     return (
      <div className="photo">
         <a href={url} className="link">
@@ -24,10 +24,14 @@ class Photo extends Component {
 Photo.propTypes = {
   id: PropTypes.string,
   title: PropTypes.string,
+  url: PropTypes.string,
+  thumbnailUrl: PropTypes.string,
 };
 Photo.defaultProps = {
     id: '1',
     title: '',
+    url: '',
+    thumbnailUrl: '',
 };
 
 export default Photo;
