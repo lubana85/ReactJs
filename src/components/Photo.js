@@ -28,7 +28,6 @@ Photo.propTypes = {
   thumbnailUrl: PropTypes.string,
 };
 Photo.defaultProps = {
-    id: '1',
     title: '',
     url: '',
     thumbnailUrl: '',
