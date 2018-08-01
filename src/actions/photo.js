@@ -1,18 +1,21 @@
 
-// Constants
 import apiRequest from "../components/apiRequest";
 
+// Constants
 export const LIST_START = 'LIST_START';
 export const LIST_SUCCESS = 'LIST_SUCCESS';
 export const LIST_FAILURE = 'LIST_FAILURE';
 
+/**
+ * This function calls sends request to API to get the data.
+ **/
 export function getList() {
     return (dispatch) => {
         dispatch(startList());
-
          try {
-            const request = apiRequest('GET', 'https://jsonplaceholder.typicode.com/photos');
-            request.then(response => { dispatch(listSuccess(response.data)); return response.data; });
+            apiRequest('GET', 'https://jsonplaceholder.typicode.com/photos').then(
+                response => { dispatch(listSuccess(response.data)); }
+            );
         } catch (err) {
             return dispatch(listFailure(err));
         }
