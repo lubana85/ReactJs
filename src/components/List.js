@@ -27,7 +27,6 @@ class List extends Component {
             errorMessage = 'error .....';
         }
 
-        console.log(this.props);
         return (
             <div className="photos">
                 {loadingMessage}
@@ -66,7 +65,6 @@ List.propTypes = {
     ).isRequired,
     loading: PropTypes.bool,
     error: PropTypes.string,
-    dispatch: PropTypes.func,
 };
 
 List.defaultProps = {
